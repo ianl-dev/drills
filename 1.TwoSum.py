@@ -22,23 +22,6 @@ Input: nums = [3,3], target = 6
 Output: [0,1]
 """
 
-"""
-My approach:
-- Use hashmap
-    - Go thru the list once, record the difference between target and element (e.g. 9-2 = 7)
-    - Call this complement: Map difference to complement {7:0, 2:1}
-- Loop
-    - Go thru the list once more, check if current number's complement is in dictionary
-        - e.g. [2,7,11], is current index 0 (num of 2) in {7:0, 2:1} -> yes, return [1,0]
-My take-aways:
-    - Use hashmap to store {signal: thing you want to find} such that when you have the correct signal you can pinpoint your goal
-
-Simplify my language:
-- the list -> list
-- Go through all the numbers and check -> Visit each number and check
-- something is Not None -> not(something is None) -> more pythonic
-"""
-
 # My solution
 def twoSum(nums, target):
     """
@@ -50,9 +33,6 @@ def twoSum(nums, target):
         pairIndex (tuple) - pair of elements that add up to target
     
     DOC-TEST
-    >>> twoSum([2,7,11,15], 9)
-    [0, 1]
-
     >>> twoSum([3,2,4], 6)
     [1, 2]
 
@@ -60,6 +40,16 @@ def twoSum(nums, target):
     [0, 1]
 
     >>> twoSum([1,2,3], 100)
+
+    My Approach:
+    - Use hashmap
+        - Go thru the list once, record the difference between target and element (e.g. 9-2 = 7)
+        - Call this complement: Map difference to complement {7:0, 2:1}
+    - Loop
+        - Go thru the list once more, check if current number's complement is in dictionary
+            - e.g. [2,7,11], is current index 0 (num of 2) in {7:0, 2:1} -> yes, return [1,0]
+    My take-aways:
+        - Use hashmap to store {signal: thing you want to find} such that when you have the correct signal you can pinpoint your goal
     
     """
     # Store difference between target and current number
