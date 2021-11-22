@@ -1,24 +1,12 @@
 """
-Problem: Move Zeroes
-Date: 11/5/21
-Given an integer array nums, move all 0's to the end of it while maintaining the relative order of the non-zero elements.
+Move Zeros:
 
-Note that you must do this in-place without making a copy of the array.
+Move all zeros in a list to the end of the list, while preserving the relative order of the list
 
-Example 1:
+e.g. [0,1,2,0,5] -> [1,2,5,0,0]
 
-Input: nums = [0,1,0,3,12]
-Output: [1,3,12,0,0]
-Example 2:
+This problem is an architype for move a certain signal to one side of the list
 
-Input: nums = [0]
-Output: [0]
-
-Constraints:
-1 <= nums.length <= 104
--231 <= nums[i] <= 231 - 1
- 
-Follow up: Could you minimize the total number of operations done?
 """
 
 def moveZeros(nums):
@@ -28,22 +16,23 @@ def moveZeros(nums):
         nums (list): a list of integers
 
     My Approach:
+    - like quicksort, keep track of the left-most zero and the left-most nonzero element using two pointers
+    - must go through each element once O(n)
+    - space complexity can be O(1)
     """
-    i = 0
-    for j in range(len(nums)):
-        if nums[j] != 0:
-            nums[i], nums[j] = nums[j], nums[i]
-            i += 1
-            print(i, j)
+    write = 0
+    for read in range(len(nums)):
+        # Check if element is nonzero, if so, swap
+        if nums[read] != 0:
+            nums[read], nums[write] = nums[write], nums[read]
+            # Only increment counter when we visit nonzero element (so for zero, the pointer would halt until we reach the first nonzero)
+            write += 1
+    return nums
 
 
 if __name__ == '__main__':
-    import doctest
-    doctest.testmod()
-
     # Test case 1
     a = [0,1,0,3,12]
-    b = [0]
-    moveZeros(c)
-    print(c)
-    c = [4,2,4,0,0,3,0,5,1,0]
+    moveZeros(a)
+    print(a)
+    assert a == [1,3,12,0,0]
