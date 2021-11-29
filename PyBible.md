@@ -26,6 +26,10 @@ REVERSE: A[::-1]
   sorted(A) => list copy
   reversed(A) => iterator
 
+- Permutation
+c = [(x,y) for x in a for y in b]
+
+
 A.append(x)
 A.remove(x)
 A.insert(index, x)
