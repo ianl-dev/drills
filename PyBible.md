@@ -29,6 +29,22 @@ REVERSE: A[::-1]
 - Permutation
 c = [(x,y) for x in a for y in b]
 
+- String
+Immutable -> cannot set index value
+s.strip() -> remove any space
+s.startswith(prefix) -> True/False start with prefix?
+s.endswith(suffix) -> True/False end with suffix?
+','.join(iterable) -> return a string
+s.lower() -> create a new string which stores the lower version
+s.upper()
+
+Setting is creating new array:
+s = s[1:]
+s += '123' 
+Meaning: To concatenate n letters, it takes n^2 time
+Extra space 
+Alternative to string: list in python
+As always, try to write values from the back
 
 A.append(x)
 A.remove(x)
