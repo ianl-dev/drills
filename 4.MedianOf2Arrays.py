@@ -15,9 +15,6 @@ Output: 3.5
 My Approach:
     - divide and conquer
     - check median of each sub array at each step
-
-What I learned:
-    - 
 """
 
 def findMedian(nums1, nums2):
