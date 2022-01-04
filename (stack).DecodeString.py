@@ -1,5 +1,5 @@
 """
-Leetcode hard
+Leetcode hard 394
 """
 def decodeString(self, s: str) -> str:
         # Need a stack

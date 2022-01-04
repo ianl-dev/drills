@@ -1,5 +1,5 @@
 """
-Given two strings.
+Given two strings. 1143
 Find common substring, longest
 """
 def longestCommonString(str1, str2):
