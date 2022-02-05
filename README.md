@@ -1,5 +1,2 @@
-# Problem-solving
-My solutions of online coding challenges
-
-1. Two Sum
-2. Unique Email Counter
+# Daily Leetcode
+Solving one problem a day is the goal.
