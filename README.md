@@ -1,2 +1,2 @@
-# Daily Leetcode
-Solving one problem a day is the goal.
+## Problem solving
+Solving one programming problem daily. Aiming for medium and hard leetcode questions.
