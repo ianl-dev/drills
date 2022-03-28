@@ -1,3 +1,7 @@
+"""
+Medium 695 - Max Area of Island
+"""
+
 class Solution:
     def maxAreaOfIsland(self, grid: List[List[int]]) -> int:
         def get_neighbors(sr, sc):
